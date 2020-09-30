@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="true" backupStaticAttributes="false" bootstrap="application/tests/bootstrap.php" cacheTokens="true" colors="true" convertErrorsToExceptions="true" convertNoticesToExceptions="true" convertWarningsToExceptions="true" processIsolation="false" stopOnFailure="false" verbose="false">
+	<testsuites>
+		<testsuite name="Tests project Telzir">
+			<directory>./application/tests</directory>
+		</testsuite>
+	</testsuites>
+	<php>
+		<const name="PHPUNIT_TEST" value="1" />
+		<server name="REMOTE_ADDR" value="0.0.0.0" />
+	</php>
+	<filter>
+		<whitelist>
+			<directory suffix=".php">./application/controllers</directory>
+			<directory suffix=".php">./application/models</directory>
+			<directory suffix=".php">./application/views</directory>
+			<directory suffix=".php">./application/libraries</directory>
+			<directory suffix=".php">./application/helpers</directory>
+			<directory suffix=".php">./application/hooks</directory>
+		</whitelist>
+	</filter>
+</phpunit>
